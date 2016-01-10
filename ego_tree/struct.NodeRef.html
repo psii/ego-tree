@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `NodeRef` struct in crate `ego_tree`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, NodeRef">
+
+    <title>ego_tree::NodeRef - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>ego_tree</a></p><script>window.sidebarCurrent = {name: 'NodeRef', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>ego_tree</a>::<wbr><a class='struct' href=''>NodeRef</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-86' class='srclink' href='../src/ego_tree/lib.rs.html#118-122' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct NodeRef&lt;'a, T: 'a&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>A node reference.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a, T: 'a&gt; <a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;</code></h3><div class='impl-items'><h4 id='method.value' class='method'><code>fn <a href='#method.value' class='fnname'>value</a>(&amp;self) -&gt; &amp;'a T</code></h4>
+<div class='docblock'><p>Returns the value of this node.</p>
+</div><h4 id='method.id' class='method'><code>fn <a href='#method.id' class='fnname'>id</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/struct.NodeId.html' title='ego_tree::NodeId'>NodeId</a>&lt;T&gt;</code></h4>
+<div class='docblock'><p>Returns the ID of this node.</p>
+</div><h4 id='method.parent' class='method'><code>fn <a href='#method.parent' class='fnname'>parent</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;&gt;</code></h4>
+<div class='docblock'><p>Returns a reference to this node&#39;s parent.</p>
+</div><h4 id='method.prev_sibling' class='method'><code>fn <a href='#method.prev_sibling' class='fnname'>prev_sibling</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;&gt;</code></h4>
+<div class='docblock'><p>Returns a reference to this node&#39;s previous sibling.</p>
+</div><h4 id='method.next_sibling' class='method'><code>fn <a href='#method.next_sibling' class='fnname'>next_sibling</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;&gt;</code></h4>
+<div class='docblock'><p>Returns a reference to this node&#39;s next sibling.</p>
+</div><h4 id='method.first_child' class='method'><code>fn <a href='#method.first_child' class='fnname'>first_child</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;&gt;</code></h4>
+<div class='docblock'><p>Returns a reference to this node&#39;s first child.</p>
+</div><h4 id='method.last_child' class='method'><code>fn <a href='#method.last_child' class='fnname'>last_child</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;&gt;</code></h4>
+<div class='docblock'><p>Returns a reference to this node&#39;s last child.</p>
+</div><h4 id='method.has_siblings' class='method'><code>fn <a href='#method.has_siblings' class='fnname'>has_siblings</a>(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns true if this node has siblings.</p>
+</div><h4 id='method.has_children' class='method'><code>fn <a href='#method.has_children' class='fnname'>has_children</a>(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns true if this node has children.</p>
+</div></div><h3 class='impl'><code>impl&lt;'a, T: 'a&gt; <a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;</code></h3><div class='impl-items'><h4 id='method.ancestors' class='method'><code>fn <a href='#method.ancestors' class='fnname'>ancestors</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/iter/struct.Ancestors.html' title='ego_tree::iter::Ancestors'>Ancestors</a>&lt;'a, T&gt;</code></h4>
+<div class='docblock'><p>Returns an iterator over this node&#39;s ancestors.</p>
+</div><h4 id='method.prev_siblings' class='method'><code>fn <a href='#method.prev_siblings' class='fnname'>prev_siblings</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/iter/struct.PrevSiblings.html' title='ego_tree::iter::PrevSiblings'>PrevSiblings</a>&lt;'a, T&gt;</code></h4>
+<div class='docblock'><p>Returns an iterator over this node&#39;s previous siblings.</p>
+</div><h4 id='method.next_siblings' class='method'><code>fn <a href='#method.next_siblings' class='fnname'>next_siblings</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/iter/struct.NextSiblings.html' title='ego_tree::iter::NextSiblings'>NextSiblings</a>&lt;'a, T&gt;</code></h4>
+<div class='docblock'><p>Returns an iterator over this node&#39;s next siblings.</p>
+</div><h4 id='method.children' class='method'><code>fn <a href='#method.children' class='fnname'>children</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/iter/struct.Children.html' title='ego_tree::iter::Children'>Children</a>&lt;'a, T&gt;</code></h4>
+<div class='docblock'><p>Returns an iterator over this node&#39;s children.</p>
+</div><h4 id='method.first_children' class='method'><code>fn <a href='#method.first_children' class='fnname'>first_children</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/iter/struct.FirstChildren.html' title='ego_tree::iter::FirstChildren'>FirstChildren</a>&lt;'a, T&gt;</code></h4>
+<div class='docblock'><p>Returns an iterator over this node&#39;s first children.</p>
+</div><h4 id='method.last_children' class='method'><code>fn <a href='#method.last_children' class='fnname'>last_children</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/iter/struct.LastChildren.html' title='ego_tree::iter::LastChildren'>LastChildren</a>&lt;'a, T&gt;</code></h4>
+<div class='docblock'><p>Returns an iterator over this node&#39;s last children.</p>
+</div><h4 id='method.traverse' class='method'><code>fn <a href='#method.traverse' class='fnname'>traverse</a>(&amp;self) -&gt; <a class='struct' href='../ego_tree/iter/struct.Traverse.html' title='ego_tree::iter::Traverse'>Traverse</a>&lt;'a, T&gt;</code></h4>
+<div class='docblock'><p>Returns an iterator which traverses the subtree starting at this node.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;'a, T: 'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;</code></h3><div class='impl-items'></div><h3 class='impl'><code>impl&lt;'a, T: 'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;</code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><code>impl&lt;'a, T: 'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;</code></h3><div class='impl-items'></div><h3 class='impl'><code>impl&lt;'a, T: 'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;</code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, other: &amp;Self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl&lt;'a, T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> + 'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../ego_tree/struct.NodeRef.html' title='ego_tree::NodeRef'>NodeRef</a>&lt;'a, T&gt;</code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "ego_tree";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
