@@ -13,3 +13,11 @@ impl<T> PartialEq for NodeId<T> {
         self.tree_id == other.tree_id && self.index == other.index
     }
 }
+
+impl<T> NodeId<T> {
+    /// Return the underlying index of the node. This is useful for defining
+    /// a total order over `NodeId`s.
+    pub fn get_wrapped_index(&self) -> usize {
+        self.index
+    }
+}
